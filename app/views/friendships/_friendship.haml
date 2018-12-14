@@ -1,0 +1,22 @@
+.row.middle-xs
+  =grid xs:2, md:1 do
+    /=circle_img friendship.user.avatar.url(:thumb), 50
+    =circle_img friendship.user_view.avatar.url(:thumb), 50
+  =grid xs:6, md:7, class: "text-left" do
+    /=friendship.user.username
+    =friendship.user_view.username
+  =grid xs:4 do
+    =friendship.status_or_buttons
+  /
+    -if friendship.pending?
+      -if friendship.user == current_user
+        %span Esperando respuesta de 
+        =friendship.friend.username
+      -else
+        /=link_to "Aceptar", friendship_path(friendship, status: 1), method: :patch, class: "right-space mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+        /=link_to "Denegar", friendship_path(friendship, status: 0), method: :patch, class: "mdl-button mdl-js-button mdl-button--raised mdl-button--accent"
+    -else
+      -if friendship.active?
+        %p Aceptaste la solicitud
+      -else
+        %p Denegaste la solicitud

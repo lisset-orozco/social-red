@@ -1,0 +1,74 @@
+html,body {
+  height: 100%;
+  margin: 0px;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+.full-height {
+  height: 100%;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.right-space {
+  margin-right: 1.5em;
+}
+
+.medium {
+  font-size:1.2em;
+}
+.large-padding {
+  padding:10px 15px;
+}
+
+.big-padding {
+  padding: 2em 1.5em;
+}
+
+.padding-bottom {
+  padding-bottom: 1em;
+}
+
+.border-bottom {
+  border-bottom: 1px solid currentColor;
+}
+
+.top-space {
+  margin-top: 1em;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+.circle {
+  border-radius: 50%;
+}
+
+.remove-bullet-points {
+  list-style-type: none;
+  margin: 0;
+}
+
+.full-width{
+  width:100%;
+}
